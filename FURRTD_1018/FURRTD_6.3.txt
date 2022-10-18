@@ -1,0 +1,10 @@
+CREATE TABLE tanfolyam(
+tkód INT PRIMARY KEY,
+ár INT ,
+tipus CHAR(30),
+megnevezés CHAR(30));
+
+CREATE TABLE résztvevõ(
+tajszám ITN PRIMARY KEY,
+név CHAR(50),
+lakcím CHAR(50));
