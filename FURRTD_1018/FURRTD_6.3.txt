@@ -1,10 +1,17 @@
 CREATE TABLE tanfolyam(
-tkÛd INT PRIMARY KEY,
-·r INT ,
+tk√≥d INT PRIMARY KEY,
+√°r INT ,
 tipus CHAR(30),
-megnevezÈs CHAR(30));
+megnevez√©s CHAR(30));
 
-CREATE TABLE rÈsztvevı(
-tajsz·m ITN PRIMARY KEY,
-nÈv CHAR(50),
-lakcÌm CHAR(50));
+CREATE TABLE r√©sztvev≈ë(
+tajsz√°m ITN PRIMARY KEY,
+n√©v CHAR(50),
+lakc√≠m CHAR(50));
+
+CREATE TABLE befizet√©s(
+diak INT,
+kurzus INT,
+befizet√©s INT
+FOREIGN KEY(diak)REFERENCES resztev≈ë,
+FOREIGN KEY (kurzus) REFERENCES (tanfolyam));
