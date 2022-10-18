@@ -1,0 +1,13 @@
+CREATE DATABASE furrtd;
+
+CREATE TABLE gyarto (adoszam INT PRIMARY KEY ,nev VARCHAR(30)NOT NULL, 
+telephely VARCHAR(50)NOT NULL, irsz CHAR(4), varos CHAR(40), utca(100));
+
+CREATE TABLE termek (tkod INT PRIMARY KEY,nev VARCAHR(50)NOT NULL,
+ear INT CHECK(ear > 0),gyarto INT REFERENCES GYARTO);
+
+CREATE TABLE egysegek (aru INT REFERENCES termek,db INT CHECK(db > 0));
+
+CREATE TABLE komponens (termek FOREIGN KEY,alkatresz FOREIGN KEY);
+
+CREATE TABLE alkatresz (akod PRIMARY KEY alkatresz,nev VARCAHR(50)NOT NULL);

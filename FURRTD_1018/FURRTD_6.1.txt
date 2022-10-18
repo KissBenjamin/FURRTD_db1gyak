@@ -1,0 +1,3 @@
+CREATE database FURRTD;
+CREATE table gyarto (adoszam INT ,PRIMARY KEY  nev VARCHAR(30), telephely VARCHAR(50), is NOT NULL);
+CREATE termek (tkod INT PRIMARY KEY,nev VARCAHR(50),ear INT CHECK(ear > 0),gyarto INT REFERENCES GYARTO);
