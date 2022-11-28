@@ -17,12 +17,12 @@ void beolvas(){
     char filenev[50];
     char c;
 
-    printf("A fajl neve: \n");
+    printf("a fajlnev: \n");
     scanf("%s",filenev);
 
     fp = fopen(filenev,"w");
 
-    printf(" Uzenet: \n");
+    printf("uzenet: \n");
 
     while(c = getchar() != '#'){
         putc(c,fp);
