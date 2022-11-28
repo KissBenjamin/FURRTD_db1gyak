@@ -2,9 +2,9 @@ CREATE TABLE Film(
 filmId VARCHAR(3) PRIMARY KEY NOT NULL,
 nev VARCHAR (20) NOT NULL,
 terem int VARCHAR(2)NOT NULL,
-rendezo VARCHAR(20) NOT NULL,,
+rendezo VARCHAR(20) NOT NULL,
 hossz int,
-műfaj VARCHAR(10)NOT NULL,);
+műfaj VARCHAR(10)NOT NULL);
 
 CREATE TABLE Néző(
 gyerek int,
@@ -16,9 +16,9 @@ moziID VARCHAR(3) PRIMARY KEY NOT NULL,
 település VARCHAR(30) NOT NULL);
 
 CREATE TABLE Beaosztás(
-esti,
-délutáni,
-délelőtti);
+esti int,
+délutáni int,
+délelőtti int);
 
 CREATE TABLE Takarítók(
 takaritoID VARCHAR(3) PRIMARY KEY NOT NULL,
