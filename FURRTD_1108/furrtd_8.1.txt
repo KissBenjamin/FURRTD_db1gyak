@@ -1,0 +1,41 @@
+CREATE DATABASE FURRTD
+
+CREATE TABLE TULAJDONOS(
+tkod INT(3) Primary Key;
+nev Varchar(20) Not Null;
+varos Varchar(20);
+
+CREATE TABLE AUTO(
+rendszam Char(7) Primary Key;
+tipus Varchar(25) Not Null;
+szin Varchar(15);
+kor Int(2);
+ar Int(8);
+tulaj Int(3)Foreign key (Tulaj) References Tulajdonos(Tkod);
+
+Instert into TULAJDONOS Value(101;Kis János;Miskolc);
+Instert into TULAJDONOS Value(102;Kis Éva;Miskolc);
+Instert into TULAJDONOS Value(103;Retek Ödön;Miskolc);
+Instert into TULAJDONOS Value(104;Virág Zoltán;Miskolc);
+Instert into TULAJDONOS Value(105;Nagy Eszter;Miskolc);
+Instert into TULAJDONOS Value(106;Kovács Magor;Miskolc);
+Instert into TULAJDONOS Value(107;Asztal Angyal;Miskolc);
+
+Instert into AUTO Value(FER-831; Opel Corsa; Piros; 18; 390; 101);
+Instert into AUTO Value(GDF-525; Renault Twingo; Fekete; 16; 280; NULL);
+Instert into AUTO Value(HUB-936; Suzuki Swift; Fekete; 16; 500; NULL);
+Instert into AUTO Value(IXL-239; Suzuki Swift; Zöld; 15; 450; 105);
+Instert into AUTO Value(JAH-425; Skoda Fabia; Piros; 13; 620; 102);
+Instert into AUTO Value(JCD-443; Opel Astra; Fehér; 12; 990; 107);
+Instert into AUTO Value(KAP-290; BMW 316; Fekete; 6; 3250; 102);
+Instert into AUTO Value(KFT-204; Opel Corsa; Szürke; 7; 1250; 106);
+Instert into AUTO Value(MLM-211; Toyota Yaris; Fehér; 3; 1850; 105);
+
+
+SELECT AUTO GROUPBY (
+ar>500);
+
+SELECT AUTO COUNT (
+GROUPBY (
+szin=Piros));
+

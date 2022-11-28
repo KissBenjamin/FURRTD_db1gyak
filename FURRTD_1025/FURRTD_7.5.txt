@@ -1,0 +1,8 @@
+5.feladat
+Γ sum(befizetes), sum(Eur) ( ε befizetes/370 Eur (befizetes))
+ Γr..tajszammax(r.nev),sum(b.befizetes) (befizetes b ⋈b.diak= r.tajszamresztvevo r) 
+Γt.tkodmax(r.megnevezes),count(*) (befizetes b ⋈b.kurzus= t.tkod tanfolyam t) 
+Γt.tkodmax(r.megnevezes),count(b.kurzus) (befizetes b ⋈ + b.kurzus= t.tkod tanfolyam t) 
+Π megnevezes( ნtkodnot∊ (Π {kurzus} (befizetes)) (tanfolyam))
+ Γt.tkodmax(r.megnevezes) mn,count(*) db (befizetes b ⋈b.kurzus= t.tkod tanfolyam t) 
+Π mn( ნdb = ( Γ {max(db)} (X) ) (X) )

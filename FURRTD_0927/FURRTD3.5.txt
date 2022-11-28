@@ -1,0 +1,5 @@
+Ebben a modellben 5 entity szerepel. A Hallgató egyednek van egy neptunkód kulcsa és egy név tulajdonsága. 
+A kulcs ennél azt jelenti ,hogy a hallgatónak egy neptunkódja lehet. 
+A "Használ" és a "K-Sz" több-több kapcsolat típusúak. 
+Tehát egy könyvnek lehet több szerzője és egy szerzőnek lehet több könyve egyaránt. 
+A "Könyv" és a "Könyvtár" , valamint a "Könyvtár" és a "Campus" között egy-több típusú kapcsolat van.

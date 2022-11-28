@@ -1,0 +1,7 @@
+4.feladat
+Γkategoriakategoria,avg(ear)((termek))	
+Γtermektermek,count(*) (komponens)
+Γtermeknevtermeknev,count(*) (komponens k⋈tkod=k.termek termek t)
+Π.a.*( ნnev= x (termek) t ⋈t.tkod = k.termek komponens k ⋈a.akod= k.alkatreszalkatresz a)
+Π kategoria( ნav>x (Γ kategoriakategoria, avg(ar) av ( (termek)))
+

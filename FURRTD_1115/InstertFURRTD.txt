@@ -1,0 +1,14 @@
+INSERT INTO oktato VALUES (
+'ABC123',
+informatikai tanszék',
+'Tanárb Ácsi');
+Insert INTO targy VALUES(
+'GAIL-123B4',
+3,
+'kitalált');
+
+INSERT INTO hallgato VALUES(
+'FURRTD',
+'Kiss Benjámin',
+'infkor',
+'2001.07.18.',21);

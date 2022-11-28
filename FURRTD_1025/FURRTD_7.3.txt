@@ -1,0 +1,6 @@
+3.feladat
+Πtkod,nev(ςkategoria = x(termek))
+Πtermeknev,gyartonev(termek t⋈termekgyarto= gyartoadoszamgyartogy)
+Πgyartonev(ςkategoria = x(termek)t⋈termekgyarto =gyartoadoszamgyartogy)
+Γcount(*)(ςear>Y (termek))
+Γcount(*)(gyartogy⋈termekgyarto=gyartoadoszamςear>Y (termek) t )

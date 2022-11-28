@@ -1,0 +1,22 @@
+
+CREATE TABLE oktato (
+neptunkod NUMERIC(6) PRIMARY KEY,
+nev VARCHAR(20),
+tanszek VARCHAR(30));
+
+CREATE TABLE targy (kod INT PRIMARY KEY,
+kredit INT,
+megnevezes VARCHAR(20));
+
+CREATE TABLE hallgato (
+neptunkod NUMERIC(6) PRIMARY KEY,
+nev VARCHAR(30),
+tankor VARCHAR(20),
+szuld DATE,
+eletkor INT);
+
+CREATE TABLE cim (
+irszam INT,
+varos VARCHAR(20),
+utca VARCHAR(40),
+hsz INT);
