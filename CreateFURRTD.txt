@@ -1,0 +1,70 @@
+<<<<<<< HEAD
+Create table Film(
+filmId int PRIMARY KEY,
+nev VARCHAR2(20) NOT NULL,
+terem VARCHAR2(2) NOT NULL,
+rendezo VARCHAR2(20) NOT NULL,
+mufaj VARCHAR2(10)NOT NULL)
+;
+=======
+CREATE TABLE Film(
+filmId VARCHAR(3) PRIMARY KEY NOT NULL,
+nev VARCHAR (20) NOT NULL,
+terem VARCHAR(2)NOT NULL,
+rendezo VARCHAR(20) NOT NULL,
+hossz int,
+műfaj VARCHAR(10)NOT NULL);
+>>>>>>> 77b696523d454bfaabd1d48944680902194a2fb9
+
+CREATE TABLE Nezo(
+jegyID int PRIMARY KEY, 
+filmID int,
+fizetesimód VARCHAR2(20)NOT NULL,
+kedvezmenyes VARCHAR2(20)NOT NULL,
+kor int,
+foreign key(filmID) references Film(filmID)
+);
+
+CREATE TABLE ETEL_ITAL(
+tipusID int PRIMARY KEY,
+ar int,
+jegyID int,
+nev VARCHAR2(20) NOT NULL,
+suly VARCHAR2(20) NOT NULL,
+foreign key(jegyID) references Nezo(jegyID)
+)
+;
+
+CREATE TABLE Mozi(
+moziID int PRIMARY KEY,
+teremszam int,
+irszam VARCHAR2(20) NOT NULL,
+varos VARCHAR2(20) NOT NULL,
+utca VARCHAR2(20) NOT NULL,
+tulajdonos VARCHAR2(20) NOT NULL 
+);
+
+Create table F_Mkapcsolat(
+filmId int,
+moziID int,
+hossz int NOT NULL,
+primary key(filmID,moziID),
+foreign key(filmID) references Film(filmID),
+foreign key(moziID) references Mozi(moziID) 
+);
+
+
+CREATE TABLE Takarito(
+takaritoID int PRIMARY KEY,
+moziID int unique,
+nev VARCHAR(20) NOT NULL,
+ceges int,
+beosztas VARCHAR(10),
+foreign key(moziID) references Mozi(moziID)
+);
+
+CREATE TABLE Elerhetoseg(
+takaritoID int NOT NULL,
+szoveg VARCHAR2(20) NOT NULL,
+foreign key(takaritoID) references Takarito(takaritoID)
+);
